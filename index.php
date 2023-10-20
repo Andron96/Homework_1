@@ -1,7 +1,12 @@
 <?php
-$expression = true;
-if ($expression == true): ?>
-    Это будет отображено, если выражение истинно.
-<?php else: ?>
-    В ином случае будет отображено это.
-<?php endif; ?>
+$a = 1.54;
+$b = "письмо от друга";
+$c = false;
+$d = "";
+var_dump($a);
+echo "<br>";
+var_dump($b);
+echo "<br>";
+var_dump($c);
+echo "<br>";
+var_dump($d);
