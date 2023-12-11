@@ -12,19 +12,15 @@ while ($cycle) {
     $inpVal = readline("Введите целое число от 1 до 100 или \"Вычислить\": ");
     if (($inpVal >= 1) && ($inpVal <= 100)) {
         $elements[] = $inpVal;
-    }
-    elseif ($inpVal === "Вычислить") {
-        foreach ($elements as $elementsVal) {
-            $sum += $elementsVal;
-        }
-        $amount = count($elements);
-        if ($amount == 0) {
+    } elseif ($inpVal === "Вычислить") {
+        if (!$elements) {
             break;
         }
+        $sum = array_sum($elements);
+        $amount = count($elements);
         $average = $sum / $amount;
         break;
-    }
-    else {
+    } else {
         break;
     }
 }
